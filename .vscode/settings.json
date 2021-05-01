@@ -1,0 +1,10 @@
+{
+  // "files.autoSave": "afterDelay",
+  // "files.autoSaveDelay": 500,
+
+  // For autocompletions
+  "files.associations": {
+    // "*.css": "scss" // not needed since using custom snippets
+    // "*.js": "javascriptreact"
+  }
+}
