@@ -32,8 +32,24 @@ body {
 .login {
   color: tomato;
 }
+.html_url {
+  text-decoration: none;
+}
 .avatar_url img {
   border-radius: 3rem;
+}
+.isloading,
+.isError {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(200, 100, 105);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {

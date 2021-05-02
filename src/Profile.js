@@ -2,18 +2,17 @@ import React, { useState, useEffect } from "react";
 import User from "./User";
 import handleFetch from "./handleFetch";
 
-const url = "https://api.github.com/users/umeshmk";
-
-function Profile() {
+function Profile({ api }) {
   const [user, setUser] = useState({});
 
-  let getUser = async () => {
-    let data = await handleFetch(url);
-    setUser(data);
-  };
   useEffect(() => {
+    let getUser = async () => {
+      let data = await handleFetch(api);
+      setUser(data);
+    };
+
     getUser();
-  }, []);
+  }, [api]);
 
   return (
     <div className="profile">

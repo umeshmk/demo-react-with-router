@@ -1,20 +1,33 @@
 import React, { useState, useEffect } from "react";
 import User from "./User";
 import handleFetch from "./handleFetch";
+import Loading from "./Loading";
+import Error from "./Error";
 
-const url = "https://api.github.com/users";
-
-const ListUsers = () => {
+const ListUsers = ({ api }) => {
   const [users, setUsers] = useState([]);
-
-  let getUsers = async () => {
-    let data = await handleFetch(url);
-    setUsers(data);
-  };
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
+    let getUsers = async () => {
+      let data = await handleFetch(api);
+      if (!data) setIsError(true);
+
+      setUsers(data);
+    };
+
     getUsers();
-  }, []);
+
+    // purposefully added timeout to show loading icon
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+  }, [api]);
+
+  if (isLoading || isError) {
+    return <>{isLoading ? <Loading /> : <Error />}</>;
+  }
 
   return (
     <>

@@ -1,11 +1,16 @@
 // https://jsfiddle.net/ayuc60nb/4/
 
+let __prod__ = process.env.NODE_ENV === "production" ? true : false;
+// __prod__ = true;
+
 const handleFetch = async (url) => {
   let [response, resError] = await handleError(fetch(url));
-  if (resError) throw new Error("Failed to fetch - " + url);
+  if (resError && !__prod__) throw new Error("Failed to fetch - " + url);
+  if (__prod__ && !response) return undefined;
 
   let json = await response.json();
   if (!response.ok) {
+    if (__prod__) return undefined;
     throw new Error(
       "Github Api - " +
         json.message +
