@@ -15,14 +15,14 @@ const ListUsers = ({ api }) => {
       if (!data) setIsError(true);
 
       setUsers(data);
+
+      // purposefully added timeout to show loading icon
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
     };
 
     getUsers();
-
-    // purposefully added timeout to show loading icon
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
   }, [api]);
 
   if (isLoading || isError) {

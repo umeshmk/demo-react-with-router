@@ -4,7 +4,7 @@
 
   // For autocompletions
   "files.associations": {
-    // "*.css": "scss" // not needed since using custom snippets
+    "*.css": "css"
     // "*.js": "javascriptreact"
   }
 }

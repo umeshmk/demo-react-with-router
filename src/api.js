@@ -1,5 +1,5 @@
 const api = {
-  all_users: "https://api.githaub.com/users",
+  all_users: "https://api.github.com/users",
   umeshmk: "https://api.github.com/users/umeshmk",
 };
 
