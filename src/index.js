@@ -8,7 +8,7 @@ import Profile from "./profile";
 function App() {
   return (
     <React.StrictMode>
-      <Router>
+      <Router basename="/demo-react-with-router">
         <Switch>
           <Route path="/profile/:login">
             <Profile />
