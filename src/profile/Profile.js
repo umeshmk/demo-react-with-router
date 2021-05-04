@@ -1,5 +1,7 @@
 import React from "react";
 import { formatDistance } from "date-fns";
+import github from "./github.png";
+import twitter from "./twitter.png";
 
 import "./index.css";
 
@@ -31,7 +33,7 @@ function Profile({ user }) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/github.png" alt="" />
+          <img src={github} alt="" />
           {user.login}
           <br />
         </a>
@@ -48,7 +50,7 @@ function Profile({ user }) {
         </li>
         {user.twitter_username && (
           <li className="twitter_username">
-            <img src="/twitter.png" alt="" />
+            <img src={twitter} alt="" />
             <a
               href={`https://twitter.com/${user.twitter_username}`}
               target="_blank"
