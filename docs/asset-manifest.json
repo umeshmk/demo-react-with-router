@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/demo-react-with-router/static/css/main.ca70ae77.chunk.css",
+    "main.js": "/demo-react-with-router/static/js/main.419c3f45.chunk.js",
+    "main.js.map": "/demo-react-with-router/static/js/main.419c3f45.chunk.js.map",
+    "runtime-main.js": "/demo-react-with-router/static/js/runtime-main.dd41b789.js",
+    "runtime-main.js.map": "/demo-react-with-router/static/js/runtime-main.dd41b789.js.map",
+    "static/js/2.6a7905e4.chunk.js": "/demo-react-with-router/static/js/2.6a7905e4.chunk.js",
+    "static/js/2.6a7905e4.chunk.js.map": "/demo-react-with-router/static/js/2.6a7905e4.chunk.js.map",
+    "index.html": "/demo-react-with-router/index.html",
+    "static/css/main.ca70ae77.chunk.css.map": "/demo-react-with-router/static/css/main.ca70ae77.chunk.css.map",
+    "static/js/2.6a7905e4.chunk.js.LICENSE.txt": "/demo-react-with-router/static/js/2.6a7905e4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd41b789.js",
+    "static/js/2.6a7905e4.chunk.js",
+    "static/css/main.ca70ae77.chunk.css",
+    "static/js/main.419c3f45.chunk.js"
+  ]
+}
