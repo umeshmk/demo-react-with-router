@@ -1,0 +1,92 @@
+.profile {
+  /* display: grid;
+  grid-template-rows: 200px 100px repeat(50px); */
+}
+.home {
+  padding: 1rem;
+  margin: 5rem 1rem;
+  border: 1px solid;
+  font-size: large;
+}
+.profile .avatar_url img {
+  border-radius: 3rem;
+  width: 300px;
+  padding-top: 2rem;
+}
+.profile .login {
+  color: tomato;
+  font-size: xx-large;
+}
+.profile .github a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  margin-top: 1rem;
+  /* border: 1px solid; */
+}
+.profile .github img {
+  padding-right: 0.5rem;
+  width: 50px;
+}
+.profile .name {
+  /* border: 1px solid; */
+  color: tomato;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.profile .html_url {
+  color: tomato;
+  font-size: large;
+  display: inline-block;
+}
+.profile .company {
+  font-weight: bold;
+  color: crimson;
+}
+.profile .blog a {
+  color: tomato;
+  text-decoration: none;
+  font-weight: 600;
+}
+.profile .location {
+  background: url("./pin.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-left: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+.profile .bio {
+  color: gray;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.profile .twitter_username {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 1rem;
+}
+
+.profile .twitter_username a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+.profile .twitter_username img {
+  width: 23px;
+  margin-right: 0.25rem;
+}
+
+.wrap {
+  margin-top: 3rem;
+  font-style: italic;
+  /* font-size: larger; */
+}
+.wrap span {
+  color: crimson;
+  font-weight: 700;
+  padding-right: 1rem;
+}

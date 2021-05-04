@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import User from "./User";
-import handleFetch from "./handleFetch";
-import Loading from "./Loading";
-import Error from "./Error";
+import Thumbnail from "./Thumbnail";
+import handleFetch from "../handleFetch";
+import Loading from "../Loading";
+import Error from "../Error";
+
+let once = false; // show loading icon only once on page load
 
 const ListUsers = ({ api }) => {
   const [users, setUsers] = useState([]);
@@ -19,20 +21,21 @@ const ListUsers = ({ api }) => {
       // purposefully added timeout to show loading icon
       setTimeout(() => {
         setIsLoading(false);
+        once = true;
       }, 500);
     };
 
     getUsers();
   }, [api]);
 
-  if (isLoading || isError) {
+  if ((isLoading && !once) || isError) {
     return <>{isLoading ? <Loading /> : <Error />}</>;
   }
 
   return (
     <>
       {users.map((item) => {
-        return <User user={item} key={item.id} />;
+        return <Thumbnail user={item} key={item.id} />;
       })}
     </>
   );
